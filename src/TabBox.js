@@ -1,9 +1,11 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React,{Component} from 'react';
+import ReactDOM from 'react-dom';
 import Content from './Content.js';
 import List from './List.js';
-var TabBox = React.createClass({
+import './main.scss';
+class TabBox extends Component{
     constructor(){
+        super();
         this.state = {
             list: ['导航一', '导航二', '导航三'],
             content: [
@@ -13,16 +15,16 @@ var TabBox = React.createClass({
             ],
             current: 0
         }
-    },
+    }
     handleClick(index){
         this.setState({current: index});
-    },
+    }
     currentClass(index){
         return this.state.current === index ? 'current' : '';
-    },
+    }
     contentClass(index){
         return this.state.current === index ? 'active' : '';
-    },
+    }
     render(){
         return (
             <div id="outer">
@@ -42,5 +44,5 @@ var TabBox = React.createClass({
             </div>
         )
     }
-});
-ReactDOM.render(<TabBox/>, document.getElementById('root'));
+}
+ReactDOM.render(<TabBox />, document.getElementById('root'));

@@ -1,7 +1,7 @@
 {
   "name": "react_tab",
   "version": "1.0.0",
-  "description": "react 回顾 tab",
+  "description": "react tab",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -41,6 +41,8 @@
     "url-loader": "^0.5.8"
   },
   "dependencies": {
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "webpack": "^2.3.2"
